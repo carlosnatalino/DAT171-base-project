@@ -3,6 +3,7 @@
 
 [tool.black]
 line-length = 88
+skip-string-normalization = true
 
 [tool.isort]
 profile = "black"
@@ -29,12 +30,10 @@ disallow_any_generics = true
 
 [tool.coverage.run]
 branch = true
-source = ["codeapp"]
 
 [tool.coverage.report]
 show_missing = true
 fail_under = 100
-omit = ["*tests*", "codeapp/__init__.py"]
 
 [tool.pylint]
 disable="C0114,C0115,C0116,R0903,E1101,C0103,R0914,R1702,R0912,W0105,R0904,R0902,R0801,broad-except,R1732,R0915,C0301"
