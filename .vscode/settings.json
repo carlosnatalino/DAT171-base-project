@@ -1,4 +1,5 @@
 {
+    "chat.disableAIFeatures": true,
     "editor.renderWhitespace": "all",
     "notebook.lineNumbers": "on",
     "editor.rulers": [
@@ -29,5 +30,6 @@
         "attr-value-double-quotes": true,
         "doctype-first": false,
         "spec-char-escape": false,
-    }
+    },
+    "notebook.output.textLineLimit": 80
 }

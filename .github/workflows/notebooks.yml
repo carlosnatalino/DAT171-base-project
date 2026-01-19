@@ -9,11 +9,8 @@ jobs:
     convert-to-pdf:
         runs-on: ubuntu-latest
         steps:
-        - name: Check access
-          run: |
-            curl -s https://onu1.s2.chalmers.se/pnu/check | grep "Ok"
         - name: Checkout repository
-          uses: actions/checkout@v3
+          uses: actions/checkout@v6
           with:
             fetch-depth: 0 # Fetch full history for accurate diff
         - name: Find changed ipynb files
@@ -22,7 +19,7 @@ jobs:
             git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '.ipynb$' > changed_notebooks.txt
             echo "notebooks=$(cat changed_notebooks.txt | tr '\n' ',')" >> $GITHUB_OUTPUT
         - name: Setup Python
-          uses: actions/setup-python@v4
+          uses: actions/setup-python@v6
           with:
             python-version: "3.13"
         - name: Install dependencies
@@ -40,7 +37,7 @@ jobs:
             LANG: C.UTF-8
         # Upload PDFs as artifacts
         - name: Upload PDF artifacts
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v6
           with:
             name: notebook-pdfs
             retention-days: 60
