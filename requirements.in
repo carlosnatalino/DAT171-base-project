@@ -7,19 +7,18 @@ notebook
 nbconvert[webpdf]>=7.16.5
 # packages for the final project
 python-dotenv
-matplotlib
-numpy
-scipy
+matplotlib==3.8.4
+numpy==2.4.1
+scipy==1.17.0
 PyQt6
-SQLAlchemy
+pandas==2.3.*
+requests
 # test and coverage
-flask-testing
 toml
 pytest
 coverage
 # code quality
 flake8
-requests
 mypy
 pylint
 blinker
