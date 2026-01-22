@@ -7,7 +7,7 @@ notebook
 nbconvert[webpdf]>=7.16.5
 # packages for the final project
 python-dotenv
-matplotlib==3.8.4
+matplotlib==3.10.8
 numpy==2.4.1
 scipy==1.17.0
 PyQt6
